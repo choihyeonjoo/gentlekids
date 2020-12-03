@@ -1,0 +1,202 @@
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+        @font-face {
+                         font-family: 'S-CoreDream-3Light';
+                         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+                         font-weight: normal;
+                         font-style: normal;
+                    }
+        @font-face {
+                         font-family: 'S-CoreDream-4Regular';
+                         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+                         font-weight: normal;
+                         font-style: normal;
+                    }
+        .bo{
+            border: 1px solid red;
+        }
+        body{
+            font-family: 'S-CoreDream-3Light', sans-serif;
+            height: 100vh;
+        }
+        .nav_title{
+            font-family: 'Marcellus SC', serif;
+        }
+        :root{
+            --black:black;
+            --white:white;
+            --red:#FF0000;
+            --purple:#B900FF;
+        }
+        /*5.캐로셀 안의 이미지 사이즈를 동알하게 맞추거나 화면높이에 이미지 높이 맞추기 img태그를 삭제하고 corousel-item에 이미지를 css로 넣고 코딩으로 사이즈를 맞추기*/
+
+        /*10.캐로셀 밖으로 인디케이터 흘러 넘쳐도 숨겨서 스크롤 생기지 않드록 설정*/
+       
+        #topCarousel{
+            overflow: hidden;
+        }
+        #topCarousel .carousel-item:nth-of-type(1){
+            background: url(../joo_img/main1.jpg)no-repeat center / cover; 
+            height: 100vh;
+        }
+        #topCarousel .carousel-item:nth-of-type(2){
+            background: url(../joo_img/main2.jpg)no-repeat center / cover;
+            height: 100vh;
+        }
+        #topCarousel .carousel-item:nth-of-type(3){
+            background: url(../joo_img/main3.jpg)no-repeat center / cover;
+            height: 100vh;
+        }
+        /*9.캐로셀 좌우 버튼을 마우스를 올리면 나타나도록 설정*/
+           #topCarousel .carousel-control-next{
+            right: -200px;
+            transition: right 1s;    
+        }
+           #topCarousel .carousel-control-prev{
+            left: -200px;
+            transition: left 1s;     
+        }
+          #topCarousel:hover .carousel-control-next{
+            right: 0px;     
+        }
+           #topCarousel:hover .carousel-control-prev{
+            left: 0px;     
+        }
+        /*11.캐로셀 좌우 버튼 호버시 색상 바꾸기*/
+        #topCarousel:hover .carousel-control-next:hover,#topCarousel:hover .carousel-control-prev:hover {
+            color: var(--white);
+        }
+        /*12. 캐로셀 하단 인디케이터 버튼 활성화시 스타일 변경*/
+        #topCarousel .carousel-indicators li.active{
+            background-color:var(--white);
+        }
+        /*16. loadi ng img 위치 잡기*/ 
+        .loading .d-flex img{
+            /*border: 2px solid red;*/
+            position: absolute;
+            top:50%;
+            width: 200px;
+            margin-top:-48px;
+        }
+        .loading{
+            height: 100vh;
+        }
+        /*<!-- 21.navbar의 배경색 custermize -->*/
+        .bg-black{
+            background-color: var(--black);
+
+        }
+        /*25.네브바의 height를 설정*/
+        .navbar-nav .nav-link{
+            padding-top: 10px;
+            padding-bottom:10px;
+        }
+        .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link{
+            color:var(--purple);
+        }
+        .navbar-dark .navbar-nav .nav-link{
+            color: var(--white);
+        }
+        /*29.세번째 메뉴의 배경이미지*/
+        section#product{
+            background:url(../joo_img/menu3_about_bg.jpg);
+            background-attachment: fixed;
+        }
+        /*34.scrollspy를 위한 설정*/
+        body {
+            position: relative;
+        }
+        /*39.윈도우 창에 가로스크롤 생기는 부분 처리*/
+        /*53.로딩시 가로 세로 스크롤 모두 없애기*/
+        html,body{
+            /*overflow-x:hidden; */
+            overflow: hidden;
+        }
+        /*42.다섯번째 메뉴의 배경이미지*/
+        section#cf{
+            background:url(../joo_img/menu4_about_bg.jpg);
+            padding: 80px;
+            background-attachment: fixed;
+        }
+        /*52.card-body 안의 텍스트 스타일*/
+/*        .card-body .card-title{
+            color: var(--purple);
+        }*/
+       /* .card-body .card-text::before{
+            content: " ";
+            width: 90%;
+            height: 3px;
+            background-color: var(--black);
+            display: block;
+            margin-bottom: 13px;
+        }*/
+        .explain{
+            font-family: 'S-CoreDream-4Regular';
+            
+        }
+        /*59.마지막 하단의 배경이미지*/
+        section#service{
+            background:url(../joo_img/menu7_background_bg.jpg) no-repeat center/ cover fixed;
+            background-attachment: fixed;
+            padding: 80px;
+        }
+        .bg-black{
+            background-color: black;
+        }
+        .border-warning {
+            border-color: rgba(0,0,0,0.8)!important;
+        }
+
+
+        /*wayponit 실행 전 원하는 요소를 보이지 않도록 설정*/
+        .wp1, .wp2, .wp3, .wp4, .wp5, .wp6, .wp7, .wp8, .wp9, .wp10{
+            visibility: hidden;
+        }
+        .animate__animated{
+            visibility: visible;
+        }
+        .card-text{
+            /*height: 20px;*/
+            font-size: 0.9vw;
+        }
+        #topCarousel ol .carousel-indicators{
+            margin-top: 5px;
+       }
+
+       .back-to-top {
+          position: fixed;
+          display: none;
+          right: 15px;
+          bottom: 15px;
+          z-index: 99999;
+        }
+
+        .back-to-top i {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 24px;
+          width: 40px;
+          height: 40px;
+          border-radius: 4px;
+          background: #260330;
+          color: #fff;
+          transition: all 0.4s;
+        }
+
+        .back-to-top i:hover {
+          background: #61b959;
+          color: #fff;
+        }
+        #inputName::placeholder{
+             color: var(--white);
+        }
+        #inputEmail::placeholder{
+             color: var(--white);
+        }
+        #inputTitle::placeholder{
+             color: var(--white);
+        }
+        #exampleFormControlTextarea1::placeholder{
+             color: var(--white);
+        }
